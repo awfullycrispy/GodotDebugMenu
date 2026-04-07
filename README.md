@@ -8,6 +8,7 @@ A basic menu which can be added to any Godot project to perform monitoring and b
 4. Open debug_menu.gd and edit the following variables:
   - TOGGLE_INPUT_MAP  :  put the name of the action created in step 3 here
   - DEFAULT_MENU_VISIBLE  :  set to true if you don't want the menu to be hidden by default when the project runs
+  - DEFAULT_FPS_COUNTER  :  set to false if you don't want the menu to contain an FPS counter by default
   - _loaded_ui_scene  :  update the preload path to debug_menu_ui.tscn
   - _loaded_item_scene  :  debug_menu_item.tscn
 
@@ -30,6 +31,12 @@ add_toggle_item(id, target_node, property, group_id)
 
 add_trigger_item(id, target_node, method, group_id)
   - Creates an item which displays a name (id) and a button that can be used to activate the callable (method) for the targeted node (target_node). Only supports functions without any mandatory variables, and cannot pass variables to the function.
+
+show_fps_counter()
+  - If the FPS counter is not visible, show it
+
+hide_fps_counter()
+  - If the FPS counter is visible, hide it
 
 # Modification
 - debug_menu_theme.tres can be updated as desired to change the look and feel of all the items that will be contained in the menu including things like font speed.
