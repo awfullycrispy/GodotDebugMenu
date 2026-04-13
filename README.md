@@ -18,6 +18,8 @@ Created by awfullycrispy for Godot 4.6 in 2026. All code written by a human. CC0
 # Usage
 In any script, usually in a node's _ready() function, run any of the following commands. Any instance of group_id is optional and will categorize items in the menu under specific named sections
 
+The menu by default can be toggled with `/~ (left of 1, below esc on most keyboards)
+
 --
 
 	add_viewing_item(id, target_node, property, group_id)
