@@ -1,7 +1,7 @@
 # DebugMenu for Godot
 DebugMenu is a simple add-on that allows you to easily create a menu in runtime using a single line of code that allows you to live monitor and edit variables
 
-Created by awfullycrispy for Godot 4.6 in 2026. CC0-1.0 license
+Created by awfullycrispy for Godot 4.6 in 2026. All code written by a human. CC0-1.0 license
 
 # Setup
 1. Make an "addons" folder and copy the "debug_menu" folder to it
@@ -62,5 +62,6 @@ after instantiating a new scene, you want to run code from the instantiating scr
 	$node.add_child(player)
 	DebugMenu.add_toggle_item("Can Run", player, "can_run", "Player")
 
+# Dev Notes
 
-
+I understand that this could be converted to a "real" addon by extending everything into tool scripts and auto-initializing the DebugMenu global autoload, and that there are other ways that the custom configuration could be handled outside of some global variables. Additionally, I wanted to have a global variable that would set the anchors preset on debug_menu_ui.tscn but for some reason it never resulted in what you get when that variable is changed in the editor. This was supposed to be a small project for me but this actually took a lot of reconfiguring and testing to get it to work consistently, and to leave the door open for future customization. I'm releasing it under CC0 so if you have some improvements, please be my guest!
